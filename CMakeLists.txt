@@ -9,11 +9,9 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-#add_subdirectory(src)
 add_subdirectory(external)
+add_definitions(-DSENTRY_BACKEND=breakpad)
 add_subdirectory(src)
-#link_directories(${CMAKE_BINARY_DIR}/lib)
-#TARGET_LINK_LIBRARIES(main libsentry)
 
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)

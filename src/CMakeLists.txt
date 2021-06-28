@@ -1,7 +1,10 @@
-include_directories(.)
-#include_directories(${CMAKE_SOURCE_DIR})
-file(GLOB SrcFiles *.cpp)
-#add_library(src ${SrcFiles})
-add_executable(src ${SrcFiles})
+#include_directories(.)
+#file(GLOB SrcFiles *.cpp)
+#add_executable(src ${SrcFiles})
+add_executable(src
+main.h
+main.cpp
+InitHandler.cpp
+)
 target_link_libraries(src sentry)
-#target_include_directories(src PUBLIC ../external)
+
