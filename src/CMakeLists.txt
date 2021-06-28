@@ -1,0 +1,7 @@
+include_directories(.)
+#include_directories(${CMAKE_SOURCE_DIR})
+file(GLOB SrcFiles *.cpp)
+#add_library(src ${SrcFiles})
+add_executable(src ${SrcFiles})
+target_link_libraries(src sentry)
+#target_include_directories(src PUBLIC ../external)
