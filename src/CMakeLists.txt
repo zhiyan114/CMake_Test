@@ -2,10 +2,10 @@ include_directories(.)
 #file(GLOB SrcFiles *.cpp)
 #add_executable(src ${SrcFiles})
 
-add_executable(src
+add_executable(mainsrc
 main.cpp
 InitHandler.cpp
 )
 #main.h
-target_link_libraries(src sentry)
+target_link_libraries(mainsrc sentry)
 
