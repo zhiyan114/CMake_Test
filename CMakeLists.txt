@@ -9,7 +9,7 @@ project(cmake_test VERSION 1.0)
 
 # Setup the configurations
 # Force Crashpad for sentry as it the recommended options
-SET(SENTRY_BACKEND crashpad CACHE STRING "Sentry Backend" FORCE)
+#SET(SENTRY_BACKEND crashpad CACHE STRING "Sentry Backend" FORCE)
 
 # Setup the output dir
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
