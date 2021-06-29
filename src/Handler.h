@@ -1,3 +1,0 @@
-namespace MainHandler {
-void LoadSentry();
-}
