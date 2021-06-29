@@ -13,8 +13,7 @@ void MainHandler::Discord::Init() {
   memset(&handlers, 0, sizeof(handlers));
   Discord_Initialize("854404100342153236", &handlers, 1, "1234");
 }
-std::string LastState = "";
-void MainHandler::Discord::Update(std::string detail,std::string state = LastState) {
+void MainHandler::Discord::Update(std::string state,std::string detail) {
   if(state != LastState) {
     LastState = state
   }
