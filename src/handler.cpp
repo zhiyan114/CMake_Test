@@ -2,6 +2,8 @@
 #include <sentry.h>
 #include <discord_rpc.h>
 #include <discord_register.h>
+#include <cstring>
+#include <iostream>
 
 void MainHandler::LoadSentry() {
   sentry_options_t *options = sentry_options_new();
