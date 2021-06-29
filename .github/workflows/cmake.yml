@@ -24,7 +24,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Pull submodule
-      run: git submodule update --init
+      run: git submodule update --init --remote --force
       
     - name: Install missing system library
       run: sudo apt-get install gcc-10 g++-10 libcurl4-openssl-dev
