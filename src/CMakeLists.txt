@@ -1,7 +1,4 @@
-#include_directories(.)
-#file(GLOB SrcFiles *.cpp)
-#add_executable(src ${SrcFiles})
-
+include_directories(.)
 add_executable(main_program
 main.cpp
 main.h
