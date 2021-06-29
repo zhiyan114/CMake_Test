@@ -7,3 +7,12 @@ void MainHandler::LoadSentry() {
   //sentry_options_set_release(options, "my-project-name@2.3.12");
   sentry_init(options);
 }
+void MainHandler::Discord:Init() {
+  DiscordEventHandlers handlers;
+  memset(&handlers, 0, sizeof(handlers));
+  Discord_Initialize("854404100342153236", &handlers, 1, "1234");
+}
+std::string LastState = "";
+void MainHandler::Discord::Update(std::string state = LastState,std::string detail) {
+
+}

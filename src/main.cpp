@@ -3,6 +3,7 @@
 std::string userinput;
 int main() {
 MainHandler::LoadSentry();
+MainHandler::Discord:Init();
 std::cout << "Type the string to input: ";
 std::getline(std::cin, userinput);
 sentry_capture_event(sentry_value_new_message_event(SENTRY_LEVEL_INFO,"User Input",userinput.c_str()));
