@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(cmake_test VERSION 1.0)
 
 # Setup the configurations
-# Force Crashpad for sentry as it the recommended options
 #SET(SENTRY_BACKEND crashpad CACHE STRING "Sentry Backend" FORCE)
+SET(BUILD_EXAMPLES OFF CACHE BOOL "Build discord-rpc example" FORCE)
 
 # Setup the output dir
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/alib)
@@ -17,6 +17,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Start the build stuff
 add_subdirectory(external)
+
 add_subdirectory(src)
 
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)

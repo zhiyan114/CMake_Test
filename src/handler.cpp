@@ -1,6 +1,7 @@
 #include <handler.h>
 #include <sentry.h>
-#include <discord.h>
+#include <discord_rpc.h>
+#include <discord_register.h>
 
 void MainHandler::LoadSentry() {
   sentry_options_t *options = sentry_options_new();
@@ -14,9 +15,6 @@ void MainHandler::Discord::Init() {
   Discord_Initialize("854404100342153236", &handlers, 1, "1234");
 }
 void MainHandler::Discord::Update(std::string state,std::string detail) {
-  if(state != LastState) {
-    LastState = state
-  }
   DiscordRichPresence discordPresence;
   memset(&discordPresence, 0, sizeof(discordPresence));
   discordPresence.state = state.c_str();
