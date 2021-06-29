@@ -1,11 +1,13 @@
-include_directories(.)
+#include_directories(.)
 #file(GLOB SrcFiles *.cpp)
 #add_executable(src ${SrcFiles})
 
-add_executable(mainsrc
+add_executable(main_program
 main.cpp
-InitHandler.cpp
+main.h
+Handler.cpp
+Handler.h
 )
 #main.h
-target_link_libraries(mainsrc sentry)
-
+target_link_libraries(main_program sentry)
+target_link_libraries(main_program discord-rpc)
